@@ -62,6 +62,10 @@ class Api {
         return this._sendData(`${this._baseUrl}/cards/${cardId}/likes`, 'DELETE', {});
     }
 
+    changeLikeCardStatus(cardId, setLike) {
+        return setLike ? this.setLike(cardId) : this.deleteLike(cardId);
+    }
+
     createCard({ name, link }) {
         return this._sendData(`${this._baseUrl}/cards`, 'POST', { name, link });
     }
