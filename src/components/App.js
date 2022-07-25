@@ -165,7 +165,6 @@ function App() {
           buttonText="Да"
           onClose={closeAllPopup}
         />
-
       </div>
     </CurrentUserContext.Provider>
   );

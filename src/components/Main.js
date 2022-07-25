@@ -10,14 +10,14 @@ function Main({onEditAvatar, onEditProfile, onAddPlace, cards, onCardClick, onCa
     <main className="content">
       <section className="profile">
         <div className="profile__avatar" style={{ backgroundImage: `url(${currentUser.avatar})` }} >
-          <button className="profile__avatar-button" type="button" aria-label="Редактировать аватар" onClick={onEditAvatar}></button>
+          <button className="profile__avatar-button" type="button" aria-label="Редактировать аватар" onClick={onEditAvatar} />
         </div>
         <div className="profile__info">
           <h1 className="profile__name">{currentUser.name}</h1>
           <p className="profile__description">{currentUser.about}</p>
-          <button className="profile__edit-button" type="button" aria-label="Редактировать профиль" onClick={onEditProfile}></button>
+          <button className="profile__edit-button" type="button" aria-label="Редактировать профиль" onClick={onEditProfile} />
         </div>
-        <button className="profile__add-button" type="button" aria-label="Добавить новое место" onClick={onAddPlace}></button>
+        <button className="profile__add-button" type="button" aria-label="Добавить новое место" onClick={onAddPlace} />
       </section>
       <section className="cards">
         <ul className="cards__list">
@@ -27,7 +27,8 @@ function Main({onEditAvatar, onEditProfile, onAddPlace, cards, onCardClick, onCa
               card={card}
               onCardClick={onCardClick}
               onCardLike={onCardLike}
-              onCardDelete={onCardDelete}/>
+              onCardDelete={onCardDelete}
+            />
           ))}
         </ul>
       </section>

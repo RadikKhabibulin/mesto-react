@@ -7,6 +7,13 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}) {
   const[name, setName] = React.useState('');
   const[link, setLink] = React.useState('');
 
+  React.useEffect(() => {
+    if (isOpen) {
+      setName('');
+      setLink('');
+    }
+  }, [isOpen]);
+
   function handleNameChange(e) {
     setName(e.target.value);
   }
@@ -23,19 +30,13 @@ function AddPlacePopup({isOpen, onClose, onAddPlace}) {
     });
   }
 
-  function handeClose() {
-    onClose();
-    setName('');
-    setLink('');
-  }
-
   return (
     <PopupWithForm
       title="Новое место"
       name="add-place"
       buttonText="Создать"
       isOpen={isOpen}
-      onClose={handeClose}
+      onClose={onClose}
       onSubmit={handleSubmit}
     >
       <input

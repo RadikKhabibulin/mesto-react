@@ -10,8 +10,8 @@ function ImagePopup({card, onClose}) {
           className="popup__close-button"
           type="button"
           aria-label="Закрыть изображение"
-          onClick={onClose}>
-        </button>
+          onClick={onClose}
+        />
       </div>
     </div>
   );
